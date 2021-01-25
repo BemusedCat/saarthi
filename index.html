@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Saarthi</title>
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header>
+
+    <nav class="navbar navbar-dark box" id="heading">
+      <h1>Saarthi</h1>
+        <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#myModal">New Employee</button>
+      </a>
+    </nav>
+  </header>
+
+
+
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">New Employee</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        </div>
+        <div class="modal-body">
+          <p>
+          <form data-toggle="validator">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name"  placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <label for="empid">Employee Id</label>
+              <input type="text" class="form-control" id="empid" aria-describedby="emailHelp" placeholder="Employee Id" required>
+            </div>
+            <div class="form-group">
+              <label for="sel1">Department:</label>
+              <select class="form-control" id="dept" required>
+                <option>Customs</option>
+                <option>Marketing</option>
+                <option>Web Dev</option>
+                <option>Deep learning</option>
+                <option>Content Writing</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="doj">Date of Joining:</label>
+              <input type="date" id="doj" name="doj" class="form-control" required>
+
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" required>
+            </div>
+            <input type="reset" value="Clear" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary btn-sub">Submit</button>
+          </form>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div style="width:auto; height:500px; overflow:auto;">
+    <table id="myTableData" border="1" cellpadding="2" class="table table-dark table-wrap">
+      <thead >
+        <tr>
+          <th>#</th>
+          <th><b>Name</b></th>
+          <th><b>Employee Id</b></th>
+          <th><b>Department</b></th>
+          <th><b>Date of Joining</b></th>
+          <th><b>Email</b></th>
+        </tr>
+      </thead>
+      <tbody class="tbl">
+
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  <script src="app.js" charset="utf-8"></script>
+
+</body>
+
+</html>
